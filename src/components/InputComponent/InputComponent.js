@@ -1,10 +1,10 @@
 import React from 'react';
 
-function InputComponent() {
+function InputComponent({ submitGuess }) {
   const [guess, setGuess] = React.useState('');
   function handleSubmit(e) {
     e.preventDefault();
-    console.info({ guess });
+    submitGuess(guess);
     setGuess('');
   }
   return (
