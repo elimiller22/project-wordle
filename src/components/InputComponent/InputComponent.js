@@ -1,6 +1,6 @@
 import React from 'react';
 
-function InputComponent({ submitGuess }) {
+function InputComponent({ submitGuess, disabled }) {
   const [guess, setGuess] = React.useState('');
   function handleSubmit(e) {
     e.preventDefault();
@@ -14,6 +14,7 @@ function InputComponent({ submitGuess }) {
         id="guess-input"
         value={guess}
         pattern="\w{5,5}"
+        disabled={disabled}
         onChange={(e) => {
           setGuess(e.target.value.toUpperCase());
         }}
