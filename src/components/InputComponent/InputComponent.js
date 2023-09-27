@@ -12,6 +12,7 @@ function InputComponent({ submitGuess, disabled }) {
       <label htmlFor="guess-input">Enter guess (5 characters):</label>
       <input
         id="guess-input"
+        required
         value={guess}
         pattern="\w{5,5}"
         disabled={disabled}
